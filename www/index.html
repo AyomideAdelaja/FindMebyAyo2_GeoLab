@@ -7,7 +7,7 @@
 		<link rel="icon" href="img/favicon.png">
 
 		<!-- Import Cordova requirements -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 		<link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
 		<link rel="stylesheet" href="css/jquery.mobile.theme.css" />
@@ -83,6 +83,11 @@
 		<script>
 			var Latitude = undefined;
 			var Longitude = undefined;
+
+			document.addEventListener("deviceready", onDeviceReady, false);
+		    function onDeviceReady() {
+		        console.log("navigator.geolocation works well");
+		    }
 
 			//Initial Map
 			function initMap () {
